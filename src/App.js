@@ -2,6 +2,7 @@ import './App.css';
 import {Modal} from "./components/Modal";
 import Form from './components/Form'
 import { useState } from 'react';
+import Table from './components/Table'
 
 function App() {
   const [show, setShow] = useState(false)
@@ -13,6 +14,7 @@ function App() {
       { show ? <div onClick={closeForm} className="back-drop"></div> : null }
       <button onClick={() => setShow(true)} className="btn-openForm">New Employee</button>
       <Modal show={show} close={closeForm} />
+      <Table />
     </div>
   );
 }
