@@ -76,14 +76,20 @@ function Form() {
 
                 <div className='form-control'>
                     <label htmlFor='dept'>Department</label>
-                    <input
-                        type='dropdown'
+                    <select
                         id='dept'
                         name='dept'
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                         value={formik.values.dept}
-                    />
+                    >
+                        <option selected value="Front-End">Front-End</option>
+                        <option value="Back-End">Back-End</option>
+                        <option value="Deep Learning">Deep Learning</option>
+                        <option value="Bot Developer">Bot Developer</option>
+                        <option value="UI/UX">UI/UX</option>
+                    </select>
+
                     {formik.touched.dept && formik.errors.dept ? <div className='error'>{formik.errors.dept}</div> : null}
                 </div>
 
