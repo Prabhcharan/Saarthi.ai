@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css'
+import React from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
-function Calendar() {
-    const [selectedDate, setSelectedDate] = useState(null)
-    return (
-        <div className='date'>
-            <DatePicker
-                selected={selectedDate}
-                onChange={date => setSelectedDate(date)}
-                dateFormat='dd/MM/yyyy'
-                maxDate={new Date()}
-                isClearable
-                showYearDropdown
-                scrollableYearDropdown
-            />
-        </div>
-    )
-}
+const Calendar = ({name, value, onChange}) => {
+  return (
+    <div className="date">
+      <DatePicker
+        selected={value}
+        onChange={val => {
+          onChange(name, val);
+      }}
+        dateFormat="dd/MM/yyyy"
+        maxDate={new Date()}
+        isClearable
+        showYearDropdown
+        scrollableYearDropdown
+      />
+    </div>
+  );
+};
 
-export default Calendar
+export default Calendar;

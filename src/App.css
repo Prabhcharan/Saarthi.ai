@@ -1,13 +1,21 @@
-.form-control {
-  margin-bottom: 20px;
-}
-
 .error {
   color: red;
 }
 
+.App {
+margin-left: auto;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
 .btn-openForm {
-  background: #2c2c2c;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  background: #ff3e1c;
   color: #eee;
   font-size: 1rem;
   margin: 2rem;
@@ -15,6 +23,10 @@
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+button {
+margin: auto;
 }
 
 .back-drop {
