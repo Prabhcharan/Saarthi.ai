@@ -20,7 +20,6 @@ export const Modal = ({ show, close, ...props }) => {
       </div>
       <div className="modal-content">
         <div className="modal-body">
-          <h4></h4>
           <Form close={close} {...props} />
         </div>
       </div>
